@@ -31,7 +31,7 @@ import { UserScoreResponseDto } from './dto/user-score-response.dto';
 @ApiTags('creator-events')
 @Controller('creator-events')
 export class CreatorEventsController {
-  constructor(private readonly creatorEventsService: CreatorEventsService) { }
+  constructor(private readonly creatorEventsService: CreatorEventsService) {}
 
   /**
    * GET /api/creator-events/search
@@ -141,7 +141,7 @@ export class CreatorEventsController {
 @ApiTags('creator-events')
 @Controller('creator-events')
 export class PublicCreatorEventsController {
-  constructor(private readonly creatorEventsService: CreatorEventsService) { }
+  constructor(private readonly creatorEventsService: CreatorEventsService) {}
 
   /**
    * GET /api/creator-events/invite/:code
@@ -171,7 +171,7 @@ export class PublicCreatorEventsController {
 @Roles(Role.Admin)
 @ApiBearerAuth()
 export class AdminCreatorEventsController {
-  constructor(private readonly creatorEventsService: CreatorEventsService) { }
+  constructor(private readonly creatorEventsService: CreatorEventsService) {}
 
   /**
    * GET /api/admin/creator-events/config

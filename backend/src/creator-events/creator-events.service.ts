@@ -67,7 +67,7 @@ export class CreatorEventsService {
     private readonly contractService: ContractService,
     @InjectRepository(CreatorEvent)
     private readonly creatorEventRepository: Repository<CreatorEvent>,
-  ) { }
+  ) {}
 
   async searchEvents(
     query: SearchEventsQueryDto,
@@ -174,7 +174,7 @@ export class CreatorEventsService {
         typeof (p as ContractParticipant & { correctPredictions?: number })
           .correctPredictions === 'number'
           ? (p as ContractParticipant & { correctPredictions: number })
-            .correctPredictions
+              .correctPredictions
           : 0;
       const accuracy =
         p.predictionCount > 0
